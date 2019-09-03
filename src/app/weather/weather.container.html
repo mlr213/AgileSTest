@@ -1,0 +1,6 @@
+<div>
+<app-search (citySearchEvent)="citySearch($event)"></app-search>
+<app-error *ngIf="isFailure$ | async" message="City not found!"></app-error>
+<app-loader *ngIf="isLoading$ | async"></app-loader>
+<app-results [weatherList]="weatherList$ | async"></app-results>
+</div>

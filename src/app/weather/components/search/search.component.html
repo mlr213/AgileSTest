@@ -1,0 +1,11 @@
+<form [formGroup]="searchForm" class="form-inline mb-5">
+  <div class="form-group col-8 pl-0">
+    <input class="form-control mt-3 col"
+           name="city"
+           formControlName="city"        
+           placeholder="City"
+           type="text"
+           required>
+  </div>
+  <button name="btnSearch" class="btn-search btn btn-primary mt-3 col-4" type="submit"  [disabled]="searchForm.invalid" (click)="search()">Search</button>
+</form>
